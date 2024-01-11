@@ -33,11 +33,11 @@ public class BookInfoController {
         return bookService.createBook(book).convertToDto();
     }
 
-    @GetMapping("/book/{id}")
-    public BookDTO getBookById(@PathVariable("id") Long id) {
-        LOGGER.info("Getting book with id: {}", id);
-        return bookService.getBookById(id).convertToDto();
-    }
+    // @GetMapping("/book/{id}")
+    // public BookDTO getBookById(@PathVariable("id") Long id) {
+    //     LOGGER.info("Getting book with id: {}", id);
+    //     return bookService.getBookById(id).convertToDto();
+    // }
 
     @PutMapping(value = "/book/{id}", consumes = "application/json", produces = "application/json")
     public BookDTO updateBook(@PathVariable("id") Long id, @RequestBody BookDTO bookDto) {
