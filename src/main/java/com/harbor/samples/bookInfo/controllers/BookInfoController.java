@@ -47,16 +47,16 @@ public class BookInfoController {
         return bookService.updateBook(book).convertToDto();
     }
 
-    @DeleteMapping("/book/{id}")
-    public void deleteBook(@PathVariable("id") Long id) {
-        LOGGER.info("Deleting book with id: {}", id);
-        bookService.deleteBook(id);
-    }
+    // @DeleteMapping("/book/{id}")
+    // public void deleteBook(@PathVariable("id") Long id) {
+    //     LOGGER.info("Deleting book with id: {}", id);
+    //     bookService.deleteBook(id);
+    // }
 
-    @GetMapping("/getBookByName")
-    public List<BookDTO> getBookByName(@RequestParam("bookName") String name) {
-        LOGGER.info("Getting book with name: {}", name);
-        return bookService.getBookByName(name);
-    }
+    // @GetMapping("/getBookByName")
+    // public List<BookDTO> getBookByName(@RequestParam("bookName") String name) {
+    //     LOGGER.info("Getting book with name: {}", name);
+    //     return bookService.getBookByName(name);
+    // }
 
 }
