@@ -30,11 +30,11 @@ public class ReviewController {
         return reviewService.createReview(review).convertToDto();
     }
 
-    @GetMapping("/review/{id}")
-    public ReviewDTO getReviewById(@PathVariable("id") Long id) {
-        LOGGER.info("Getting review with id: {}", id);
-        return reviewService.getReviewById(id).convertToDto();
-    }
+    // @GetMapping("/review/{id}")
+    // public ReviewDTO getReviewById(@PathVariable("id") Long id) {
+    //     LOGGER.info("Getting review with id: {}", id);
+    //     return reviewService.getReviewById(id).convertToDto();
+    // }
 
     @PutMapping(value = "/review/{id}", consumes = "application/json", produces = "application/json")
     public ReviewDTO updateReview(@PathVariable("id") Long id, @RequestBody ReviewDTO reviewDto) {
