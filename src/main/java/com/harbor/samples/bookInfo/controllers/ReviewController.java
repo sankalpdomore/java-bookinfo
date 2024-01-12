@@ -36,16 +36,16 @@ public class ReviewController {
     //     return reviewService.getReviewById(id).convertToDto();
     // }
 
-    @PutMapping(value = "/review/{id}", consumes = "application/json", produces = "application/json")
-    public ReviewDTO updateReview(@PathVariable("id") Long id, @RequestBody ReviewDTO reviewDto) {
-        LOGGER.info("Updating review: {}", reviewDto);
-        Review review = reviewDto.convertToReview();
-        return reviewService.updateReview(review).convertToDto();
-    }
+    // @PutMapping(value = "/review/{id}", consumes = "application/json", produces = "application/json")
+    // public ReviewDTO updateReview(@PathVariable("id") Long id, @RequestBody ReviewDTO reviewDto) {
+    //     LOGGER.info("Updating review: {}", reviewDto);
+    //     Review review = reviewDto.convertToReview();
+    //     return reviewService.updateReview(review).convertToDto();
+    // }
 
     @DeleteMapping("/review/{id}")
     public void deleteReview(@PathVariable("id") Long id) {
-        LOGGER.info("Deleting review with id: {}", id);
+        LOGGER.info("Checking if update is there review with id: {}", id);
         reviewService.deleteReview(id);
     }
 
